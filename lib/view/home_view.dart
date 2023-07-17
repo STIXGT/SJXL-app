@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/annotations.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import '../routers/app_route.gr.dart';
 
@@ -19,7 +19,7 @@ class HomeView extends StatelessWidget {
               onPressed: () {
                 AutoRouter.of(context).push(const FavoritosViewRoute());
               },
-              child: Text('inicia Sesion')),
+              child: const Text('inicia Sesion')),
           const Divider(
             color: Colors.transparent,
             height: 25.0,
@@ -28,7 +28,7 @@ class HomeView extends StatelessWidget {
               onPressed: () {
                 AutoRouter.of(context).push(const DeliveryViewRoute());
               },
-              child: Text('inicia Sin Sesion')),
+              child: const Text('inicia Sin Sesion')),
           const Divider(
             color: Colors.transparent,
             height: 25.0,
@@ -38,7 +38,7 @@ class HomeView extends StatelessWidget {
                 SharedPreferences pref = await SharedPreferences.getInstance();
                 pref.clear();
               },
-              child: Text('Cerrar Sesion'))
+              child: const Text('Cerrar Sesion'))
         ],
       ),
     );

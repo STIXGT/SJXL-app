@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/annotations.dart';
+
+import '../routers/app_route.gr.dart';
 
 @RoutePage()
 class FavoritosView extends StatelessWidget {
@@ -7,8 +9,22 @@ class FavoritosView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.deepPurpleAccent,
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+          child: Column(
+        children: [
+          const Divider(
+            color: Colors.transparent,
+            height: 18.0,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                AutoRouter.of(context).push(const DeliveryViewRoute());
+              },
+              child: const Text("hola"))
+        ],
+      )),
     );
   }
 }

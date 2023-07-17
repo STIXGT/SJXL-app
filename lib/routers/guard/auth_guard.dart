@@ -6,11 +6,11 @@ class AuthGuard extends AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    bool loggedIn = pref.getBool('logged:_in') ?? false;
+    bool loggedIn = pref.getBool('logged_in') ?? false;
     if (loggedIn) {
       resolver.next(true);
     } else {
-      router.push(LoginViewRoute(onResult: (result) {
+      router.push(LoginViewRoute(onResult: (result) async {
         if (result == true) {
           resolver.next(true);
           router.removeLast();

@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/annotations.dart';
+
+import '../routers/app_route.gr.dart';
 
 @RoutePage()
 class DeliveryView extends StatelessWidget {
@@ -7,8 +9,23 @@ class DeliveryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.black,
-    );
+    return Scaffold(
+        body: Column(
+      children: <Widget>[
+        const Divider(
+          color: Colors.transparent,
+          height: 18.0,
+        ),
+        ElevatedButton(
+            onPressed: () {
+              AutoRouter.of(context).push(const HomeViewRoute());
+            },
+            child: const Text('Regresa al Home')),
+        const Divider(
+          color: Colors.transparent,
+          height: 18.0,
+        ),
+      ],
+    ));
   }
 }

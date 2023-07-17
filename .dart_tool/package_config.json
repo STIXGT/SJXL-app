@@ -182,6 +182,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "flutter_localizations",
+      "rootUri": "file:///home/stiven/Universidad/Third-semester/appflu/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///home/stiven/Universidad/Third-semester/appflu/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -226,6 +232,12 @@
     {
       "name": "http_parser",
       "rootUri": "file:///home/stiven/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///home/stiven/.pub-cache/hosted/pub.dev/intl-0.18.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -524,7 +536,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-07-11T19:20:10.201182Z",
+  "generated": "2023-07-17T16:52:49.010505Z",
   "generator": "pub",
   "generatorVersion": "3.0.5"
 }

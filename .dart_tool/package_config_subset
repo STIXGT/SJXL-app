@@ -138,6 +138,10 @@ http_parser
 2.12
 file:///home/stiven/.pub-cache/hosted/pub.dev/http_parser-4.0.2/
 file:///home/stiven/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib/
+intl
+2.12
+file:///home/stiven/.pub-cache/hosted/pub.dev/intl-0.18.0/
+file:///home/stiven/.pub-cache/hosted/pub.dev/intl-0.18.0/lib/
 io
 2.12
 file:///home/stiven/.pub-cache/hosted/pub.dev/io-1.0.4/
@@ -338,6 +342,10 @@ flutter
 3.0
 file:///home/stiven/Universidad/Third-semester/appflu/flutter/packages/flutter/
 file:///home/stiven/Universidad/Third-semester/appflu/flutter/packages/flutter/lib/
+flutter_localizations
+3.0
+file:///home/stiven/Universidad/Third-semester/appflu/flutter/packages/flutter_localizations/
+file:///home/stiven/Universidad/Third-semester/appflu/flutter/packages/flutter_localizations/lib/
 flutter_test
 3.0
 file:///home/stiven/Universidad/Third-semester/appflu/flutter/packages/flutter_test/
