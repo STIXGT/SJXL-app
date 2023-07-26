@@ -1,18 +1,44 @@
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static const String baseUrl = 'https://tu-backend.com/api';
+  registerPost() async {
+    var url = Uri.https('http://localhost:8000/api/v1/user/register/');
+    var response = await http.post(url, body: {
+      "email": "josevilla@gmail.com",
+      "name": "Jose",
+      "last_name": "Villa",
+      "photo": null,
+      "rol": 2,
+      "password": "admin",
+      "birth_date": "1992-02-19",
+      "sex": "M",
+      "phone": "0981113122",
+      "status": 1,
+      "username": "josevilla@gmail.com"
+    });
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
 
-  // Método para realizar una solicitud GET
-  static Future<http.Response> getData(String endpoint) async {
-    final url = Uri.parse('$baseUrl/$endpoint');
-    return await http.get(url);
+    print(await http.read(Uri.https('example.com', 'foobar.txt')));
+
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
-  // Método para realizar una solicitud POST
-  static Future<http.Response> postData(
-      String endpoint, Map<String, String> data) async {
-    final url = Uri.parse('$baseUrl/$endpoint');
-    return await http.post(url, body: data);
+  loginPost(String email, String password) async {
+    var url = Uri.https('http://localhost:8000/api/v1/login/');
+    var response =
+        await http.post(url, body: {"email": email, "password": password});
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
+
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
